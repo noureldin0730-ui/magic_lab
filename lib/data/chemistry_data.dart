@@ -2,7 +2,7 @@ class Chemical {
   final String id;
   final String name;
   final String emoji;
-  final int color; 
+  final int color;
 
   const Chemical({
     required this.id,
@@ -93,8 +93,8 @@ class ChemistryData {
   ];
 
   // دالة البحث عن التفاعل
-  static Reaction? getReaction(String? c1, String c2) {
-    if (c1 == null || c1 == c2) return null;
+  static Reaction? getReaction(String? c1, String? c2) {
+    if (c1 == null || c2 == null || c1 == c2) return null;
 
     for (var r in reactions) {
       if ((r.chem1 == c1 && r.chem2 == c2) || (r.chem1 == c2 && r.chem2 == c1)) {
